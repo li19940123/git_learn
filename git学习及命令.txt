@@ -6,4 +6,28 @@ git commit -m"" 将暂存区提交到本地版本区 m是修改说明
 
 #git的回退，修改，删除
 git status 查看git的状态，本地工作区->暂存区->版本库
+git diff 比较同一个文件的前后变化
+git log --pretty=oneline 提交的日志
+git reset --hard HEAD^ 回退到上一个版本
+git reset -hard 1094adb 回退到指定版本
+git reflog 查看操作记录，找到回退前的版本号，返回最新版本
+
+只有先add到暂存区，commit才会提交到版本区
+
+git checkout --file 撤销修改（本地工作区修改撤销同版本区，add后的修改的撤销回暂存区）
+如果只是add没有commit 可以通过git reset HEAD readme.txt 从暂存区拿回工作区，然后 git checkout --file
+
+本地工作区删除文件
+git rm -file 删除版本去
+git checkout  -- test.txt 再拉一份
+
+#远程仓库
+ssh-keygen -t rsa -C "youremail@example.com" 生产私钥和公钥
+git remote add origin git@github.com:michaelliao/learngit.git 将本地库关联到远程
+git push -u origin master 将本地库推动到远程 -u第一次、
+git clone git@github.com:michaelliao/gitskills.git 远程克隆库到本地
+
+
+
+
 
